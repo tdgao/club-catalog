@@ -162,8 +162,10 @@ body {
   cursor: pointer;
 }
 .filter-category::before{
-  content: attr(data-category);
+  content: attr(data-category) ' (' attr(data-num-clubs) ')';
+  font-weight: 500;
 }
+
 .filter-category[data-selected="false"]{
   background-color: var(--theme);
   color: var(--content);
@@ -182,6 +184,41 @@ body {
   display: none;
   /* visibility: hidden; */
 }
+
+/* TAGS HEADING */
+.tags-heading-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tags-heading{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+.tags-heading .material-icons{
+  /* margin-left: 5px; */
+  position: relative;
+  top: 1px;
+  font-weight: bold;
+  transition: all 200ms;
+}
+.tags-heading:hover .material-icons{
+  transform: translateY(2px);
+}
+.tags-heading-container button{
+  margin-top: 2px;
+  margin-left: 10px;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid gray;
+  color: hsl(0, 0%, 30%);
+}
+
 
 /* FOOTER */
 footer p{

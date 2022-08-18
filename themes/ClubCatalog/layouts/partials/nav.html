@@ -11,18 +11,47 @@
   {{/*  search algorithm  */}}
   <input type="search" id="search" name="search" autocomplete="off" placeholder="Search...">
 
-  <div class="categories-container">
-    <div class="filter-category" data-category="Arts" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Community Service & Volunteer" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Cultural" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Environmental" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Interest" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Political" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Religious" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Sports & Recreation" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="STEM" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Other" data-selected="true"><span class="material-icons"> close </span></div>
+  <div class="tags-heading-container">
+    <div class="tags-heading" id="expand-tags">Tags <span class="material-icons"> expand_more </span> </div>
+    <button id="select-all-tags">Select All</button>
+    ·
+    <button id="clear-tags">Clear</button>
+  </div>
+
+  <div class="categories-container" id="categories-container">
+
+    <div class="filter-category" data-num-clubs="0" data-category="Arts" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Community Service & Volunteer" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Cultural" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Environmental" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Interest" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Political" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Religious" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Sports & Recreation" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="STEM" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Other" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
 
   </div>
 
+  
 </header>

@@ -20,24 +20,77 @@ function getAllCategories(){
   return categories;
 }
 
+
 // filter categories
+function updateClubsDisplayed(){
+  let selectedCategories = [];
+  document.querySelectorAll('.filter-category[data-selected="true"]').forEach(category => selectedCategories.push(category.dataset.category));
+  
+  clubs.forEach(club => {
+    const cur = getCategory(club);
+    if ( selectedCategories.includes(cur) ){
+      club.classList.remove('hidden-none');
+    } else {
+      club.classList.add('hidden-none');
+    }
+    
+  });
+}
+
 const categories = document.querySelectorAll('.filter-category');
 categories.forEach(tag => {
+  // set num clubs in tag
+  console.log(document.querySelectorAll(`.club[data-category='${tag.dataset.category}']`).length)
+  tag.dataset.numClubs = document.querySelectorAll(`.club[data-category='${tag.dataset.category}']`).length;
+
+  // add click listener
   tag.addEventListener("click", () => {
     tag.dataset.selected = (tag.dataset.selected === "true") ? 'false' : 'true';
-    
-    let selectedCategories = [];
-    document.querySelectorAll('.filter-category[data-selected="true"]').forEach(category => selectedCategories.push(category.dataset.category));
-    
-    clubs.forEach(club => {
-      const cur = getCategory(club);
-      if ( selectedCategories.includes(cur) ){
-        club.classList.remove('hidden-none');
-      } else {
-        club.classList.add('hidden-none');
-      }
-      
-    })
+    updateClubsDisplayed();
+  });
+});
+
+
+
+
+
+// EXPANDS TAGS
+function expandTagsContainer(force=null){
+  const container = document.getElementById("categories-container");
+  if (force === true || force === false){
+    container.classList.toggle('hidden-none', force);
+    expandTags.classList.toggle('unexpanded', force);
+  } else {
+    container.classList.toggle('hidden-none');
+    expandTags.classList.toggle('unexpanded');
+  }
+}
+const expandTags = document.getElementById("expand-tags");
+expandTags.addEventListener("click", () => {
+  expandTagsContainer();
+});
+window.addEventListener('click', (e) => {
+  const clicked = e.target;
+  if (!clicked.closest('.site-header')){
+    expandTagsContainer(true);
+  }
+});
+
+// CLEAR TAGS & SELECT ALL TAGS
+const clearTags = document.getElementById("clear-tags");
+clearTags.addEventListener("click", () => {
+  categories.forEach(tag => {
+    tag.dataset.selected = "false";
+    expandTagsContainer(false)
+    updateClubsDisplayed();
+  });
+});
+const selectAllTags = document.getElementById("select-all-tags");
+selectAllTags.addEventListener("click", () => {
+  categories.forEach(tag => {
+    tag.dataset.selected = "true";
+    expandTagsContainer(false)
+    updateClubsDisplayed();
   });
 });
 

@@ -23,6 +23,11 @@ function getAllCategories(){
 // filter categories
 const categories = document.querySelectorAll('.filter-category');
 categories.forEach(tag => {
+  // set num clubs in tag
+  console.log(document.querySelectorAll(`.club[data-category='${tag.dataset.category}']`).length)
+  tag.dataset.numClubs = document.querySelectorAll(`.club[data-category='${tag.dataset.category}']`).length;
+
+  // add click listener
   tag.addEventListener("click", () => {
     tag.dataset.selected = (tag.dataset.selected === "true") ? 'false' : 'true';
     

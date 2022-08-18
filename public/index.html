@@ -4,7 +4,7 @@
 	<meta name="generator" content="Hugo 0.101.0" />
 
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 	<title>UVic Club Catalog</title>
 
@@ -35,20 +35,47 @@
   
   <input type="search" id="search" name="search" autocomplete="off" placeholder="Search...">
 
+  <div class="tags-heading-container">
+    <div class="tags-heading">Tags <span class="material-icons"> expand_more </span> </div>
+    <button class="clear-all-tags-btn">Clear Tags</button>
+  </div>
+
   <div class="categories-container">
-    <div class="filter-category" data-category="Arts" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Community Service & Volunteer" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Cultural" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Environmental" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Interest" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Political" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Religious" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Sports & Recreation" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="STEM" data-selected="true"><span class="material-icons"> close </span></div>
-    <div class="filter-category" data-category="Other" data-selected="true"><span class="material-icons"> close </span></div>
+
+    <div class="filter-category" data-num-clubs="0" data-category="Arts" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Community Service & Volunteer" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Cultural" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Environmental" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Interest" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Political" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Religious" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Sports & Recreation" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="STEM" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
+    <div class="filter-category" data-num-clubs="0" data-category="Other" data-selected="true">
+      <span class="material-icons"> close </span>
+    </div>
 
   </div>
 
+  
 </header>
 
 
@@ -59,7 +86,7 @@
 
 <div id="clubs"> 
   
-    <div class="club" data-club="Found off the Grid">
+    <div class="club" data-club="Found off the Grid" data-category="Other">
   <div class="club-title-container">
     <h4> Found off the Grid </h4>  
     <span class="club-category">
@@ -105,7 +132,7 @@
 
 
   
-    <div class="club" data-club="UVic HOPE club">
+    <div class="club" data-club="UVic HOPE club" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> UVic HOPE club </h4>  
     <span class="club-category">
@@ -151,7 +178,7 @@
 
 
   
-    <div class="club" data-club="ACI UVic Club">
+    <div class="club" data-club="ACI UVic Club" data-category="Other">
   <div class="club-title-container">
     <h4> ACI UVic Club </h4>  
     <span class="club-category">
@@ -195,7 +222,7 @@
 
 
   
-    <div class="club" data-club="MEDLIFE UVIC">
+    <div class="club" data-club="MEDLIFE UVIC" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> MEDLIFE UVIC </h4>  
     <span class="club-category">
@@ -239,7 +266,7 @@
 
 
   
-    <div class="club" data-club="UVic Formula Hybrid">
+    <div class="club" data-club="UVic Formula Hybrid" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Formula Hybrid </h4>  
     <span class="club-category">
@@ -285,7 +312,7 @@
 
 
   
-    <div class="club" data-club="SUP Club">
+    <div class="club" data-club="SUP Club" data-category="Sports &amp; Recreation">
   <div class="club-title-container">
     <h4> SUP Club </h4>  
     <span class="club-category">
@@ -329,7 +356,7 @@
 
 
   
-    <div class="club" data-club="University of Victoria Students and Scholars Association">
+    <div class="club" data-club="University of Victoria Students and Scholars Association" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> University of Victoria Students and Scholars Association </h4>  
     <span class="club-category">
@@ -373,7 +400,7 @@
 
 
   
-    <div class="club" data-club="Iranian Students Association at University of Victoria">
+    <div class="club" data-club="Iranian Students Association at University of Victoria" data-category="Cultural">
   <div class="club-title-container">
     <h4> Iranian Students Association at University of Victoria </h4>  
     <span class="club-category">
@@ -423,7 +450,7 @@
 
 
   
-    <div class="club" data-club="UVic People of Neuroscience">
+    <div class="club" data-club="UVic People of Neuroscience" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic People of Neuroscience </h4>  
     <span class="club-category">
@@ -467,7 +494,7 @@
 
 
   
-    <div class="club" data-club="University Bible Fellowship">
+    <div class="club" data-club="University Bible Fellowship" data-category="Religious">
   <div class="club-title-container">
     <h4> University Bible Fellowship </h4>  
     <span class="club-category">
@@ -511,7 +538,7 @@
 
 
   
-    <div class="club" data-club="UVic Concrete Canoe Team">
+    <div class="club" data-club="UVic Concrete Canoe Team" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Concrete Canoe Team </h4>  
     <span class="club-category">
@@ -557,7 +584,7 @@
 
 
   
-    <div class="club" data-club="Con Pro Commit">
+    <div class="club" data-club="Con Pro Commit" data-category="Interest">
   <div class="club-title-container">
     <h4> Con Pro Commit </h4>  
     <span class="club-category">
@@ -599,7 +626,7 @@
 
 
   
-    <div class="club" data-club="Leadership Through Diversity">
+    <div class="club" data-club="Leadership Through Diversity" data-category="STEM">
   <div class="club-title-container">
     <h4> Leadership Through Diversity </h4>  
     <span class="club-category">
@@ -643,7 +670,7 @@
 
 
   
-    <div class="club" data-club="VikeLabs">
+    <div class="club" data-club="VikeLabs" data-category="STEM">
   <div class="club-title-container">
     <h4> VikeLabs </h4>  
     <span class="club-category">
@@ -689,7 +716,7 @@
 
 
   
-    <div class="club" data-club="Canadian Society of Civil Engineering (CSCE)">
+    <div class="club" data-club="Canadian Society of Civil Engineering (CSCE)" data-category="STEM">
   <div class="club-title-container">
     <h4> Canadian Society of Civil Engineering (CSCE) </h4>  
     <span class="club-category">
@@ -735,7 +762,7 @@
 
 
   
-    <div class="club" data-club="AUvic Autonomous Underwater Vehicles">
+    <div class="club" data-club="AUvic Autonomous Underwater Vehicles" data-category="STEM">
   <div class="club-title-container">
     <h4> AUvic Autonomous Underwater Vehicles </h4>  
     <span class="club-category">
@@ -779,7 +806,7 @@
 
 
   
-    <div class="club" data-club="Recovery club">
+    <div class="club" data-club="Recovery club" data-category="Other">
   <div class="club-title-container">
     <h4> Recovery club </h4>  
     <span class="club-category">
@@ -823,7 +850,7 @@
 
 
   
-    <div class="club" data-club="UVic Programming Club">
+    <div class="club" data-club="UVic Programming Club" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Programming Club </h4>  
     <span class="club-category">
@@ -869,7 +896,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="Students Above Stigma">
+    <div class="club" data-club="Students Above Stigma" data-category="STEM">
   <div class="club-title-container">
     <h4> Students Above Stigma </h4>  
     <span class="club-category">
@@ -915,7 +942,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="HerCampus at U Vic">
+    <div class="club" data-club="HerCampus at U Vic" data-category="Interest">
   <div class="club-title-container">
     <h4> HerCampus at U Vic </h4>  
     <span class="club-category">
@@ -961,7 +988,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic Live Music Club">
+    <div class="club" data-club="UVic Live Music Club" data-category="Arts">
   <div class="club-title-container">
     <h4> UVic Live Music Club </h4>  
     <span class="club-category">
@@ -1005,7 +1032,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic Renewable Energy Club">
+    <div class="club" data-club="UVic Renewable Energy Club" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Renewable Energy Club </h4>  
     <span class="club-category">
@@ -1051,7 +1078,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="Victoria Association for Psychedelic Studies">
+    <div class="club" data-club="Victoria Association for Psychedelic Studies" data-category="Cultural">
   <div class="club-title-container">
     <h4> Victoria Association for Psychedelic Studies </h4>  
     <span class="club-category">
@@ -1095,7 +1122,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic IEEE Student Branch">
+    <div class="club" data-club="UVic IEEE Student Branch" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic IEEE Student Branch </h4>  
     <span class="club-category">
@@ -1141,7 +1168,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="Ecological Restoration Club">
+    <div class="club" data-club="Ecological Restoration Club" data-category="Environmental">
   <div class="club-title-container">
     <h4> Ecological Restoration Club </h4>  
     <span class="club-category">
@@ -1187,7 +1214,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVIC Cosplay Club">
+    <div class="club" data-club="UVIC Cosplay Club" data-category="Interest">
   <div class="club-title-container">
     <h4> UVIC Cosplay Club </h4>  
     <span class="club-category">
@@ -1229,7 +1256,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic Formula Racing Electric">
+    <div class="club" data-club="UVic Formula Racing Electric" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Formula Racing Electric </h4>  
     <span class="club-category">
@@ -1275,7 +1302,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic Formula Racing">
+    <div class="club" data-club="UVic Formula Racing" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Formula Racing </h4>  
     <span class="club-category">
@@ -1321,7 +1348,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="Curbside Farms">
+    <div class="club" data-club="Curbside Farms" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> Curbside Farms </h4>  
     <span class="club-category">
@@ -1367,7 +1394,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVIC Fighting Game Club">
+    <div class="club" data-club="UVIC Fighting Game Club" data-category="Interest">
   <div class="club-title-container">
     <h4> UVIC Fighting Game Club </h4>  
     <span class="club-category">
@@ -1413,7 +1440,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="AERO">
+    <div class="club" data-club="AERO" data-category="STEM">
   <div class="club-title-container">
     <h4> AERO </h4>  
     <span class="club-category">
@@ -1457,7 +1484,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic AI Club">
+    <div class="club" data-club="UVic AI Club" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic AI Club </h4>  
     <span class="club-category">
@@ -1501,7 +1528,7 @@ If you would like to compete in programming contests or just want to improve you
 
 
   
-    <div class="club" data-club="UVic Minecraft Club">
+    <div class="club" data-club="UVic Minecraft Club" data-category="Interest">
   <div class="club-title-container">
     <h4> UVic Minecraft Club </h4>  
     <span class="club-category">
@@ -1548,7 +1575,7 @@ been running 24/7 since February of 2019. So far we&#39;ve had over 600 unique p
 
 
   
-    <div class="club" data-club="International Student Services Club">
+    <div class="club" data-club="International Student Services Club" data-category="Other">
   <div class="club-title-container">
     <h4> International Student Services Club </h4>  
     <span class="club-category">
@@ -1590,7 +1617,7 @@ been running 24/7 since February of 2019. So far we&#39;ve had over 600 unique p
 
 
   
-    <div class="club" data-club="Japanese Culture Club">
+    <div class="club" data-club="Japanese Culture Club" data-category="Cultural">
   <div class="club-title-container">
     <h4> Japanese Culture Club </h4>  
     <span class="club-category">
@@ -1634,7 +1661,7 @@ been running 24/7 since February of 2019. So far we&#39;ve had over 600 unique p
 
 
   
-    <div class="club" data-club="Socialist Fightback UVic">
+    <div class="club" data-club="Socialist Fightback UVic" data-category="Political">
   <div class="club-title-container">
     <h4> Socialist Fightback UVic </h4>  
     <span class="club-category">
@@ -1680,7 +1707,7 @@ been running 24/7 since February of 2019. So far we&#39;ve had over 600 unique p
 
 
   
-    <div class="club" data-club="TCG Collectors Club">
+    <div class="club" data-club="TCG Collectors Club" data-category="Other">
   <div class="club-title-container">
     <h4> TCG Collectors Club </h4>  
     <span class="club-category">
@@ -1728,7 +1755,7 @@ https://discord.gg/t34ukCzNrH </p>
 
 
   
-    <div class="club" data-club="Amnesty International UVic">
+    <div class="club" data-club="Amnesty International UVic" data-category="Other">
   <div class="club-title-container">
     <h4> Amnesty International UVic </h4>  
     <span class="club-category">
@@ -1774,7 +1801,7 @@ https://discord.gg/t34ukCzNrH </p>
 
 
   
-    <div class="club" data-club="UVic Cuban Salsa Club">
+    <div class="club" data-club="UVic Cuban Salsa Club" data-category="Cultural">
   <div class="club-title-container">
     <h4> UVic Cuban Salsa Club </h4>  
     <span class="club-category">
@@ -1824,7 +1851,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Social Work&#39;s BIPOC Student Support Circle">
+    <div class="club" data-club="Social Work&#39;s BIPOC Student Support Circle" data-category="Other">
   <div class="club-title-container">
     <h4> Social Work&#39;s BIPOC Student Support Circle </h4>  
     <span class="club-category">
@@ -1866,7 +1893,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="UVIC Dance Jams">
+    <div class="club" data-club="UVIC Dance Jams" data-category="Arts">
   <div class="club-title-container">
     <h4> UVIC Dance Jams </h4>  
     <span class="club-category">
@@ -1912,7 +1939,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="VictoriaAI">
+    <div class="club" data-club="VictoriaAI" data-category="STEM">
   <div class="club-title-container">
     <h4> VictoriaAI </h4>  
     <span class="club-category">
@@ -1958,7 +1985,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="UVic Students Offering Support (SOS)">
+    <div class="club" data-club="UVic Students Offering Support (SOS)" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> UVic Students Offering Support (SOS) </h4>  
     <span class="club-category">
@@ -2004,7 +2031,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Blood4Life">
+    <div class="club" data-club="Blood4Life" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> Blood4Life </h4>  
     <span class="club-category">
@@ -2050,7 +2077,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="UVic Anime Club">
+    <div class="club" data-club="UVic Anime Club" data-category="Interest">
   <div class="club-title-container">
     <h4> UVic Anime Club </h4>  
     <span class="club-category">
@@ -2092,7 +2119,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Global Engineering Brigades">
+    <div class="club" data-club="Global Engineering Brigades" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> Global Engineering Brigades </h4>  
     <span class="club-category">
@@ -2138,7 +2165,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Global Business Brigades">
+    <div class="club" data-club="Global Business Brigades" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> Global Business Brigades </h4>  
     <span class="club-category">
@@ -2184,7 +2211,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="UVic Concrete Toboggan">
+    <div class="club" data-club="UVic Concrete Toboggan" data-category="Other">
   <div class="club-title-container">
     <h4> UVic Concrete Toboggan </h4>  
     <span class="club-category">
@@ -2226,7 +2253,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Society for Ecological Restoration (SER) UVic Student Association">
+    <div class="club" data-club="Society for Ecological Restoration (SER) UVic Student Association" data-category="Environmental">
   <div class="club-title-container">
     <h4> Society for Ecological Restoration (SER) UVic Student Association </h4>  
     <span class="club-category">
@@ -2270,7 +2297,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="Association of Korean-Canadian Scientists and Engineers UVIC Chapter">
+    <div class="club" data-club="Association of Korean-Canadian Scientists and Engineers UVIC Chapter" data-category="STEM">
   <div class="club-title-container">
     <h4> Association of Korean-Canadian Scientists and Engineers UVIC Chapter </h4>  
     <span class="club-category">
@@ -2312,7 +2339,7 @@ We meet almost every Wednesday night from 7:00 to 9:00 p.m. </p>
 
 
   
-    <div class="club" data-club="UVic Nitshifters Toastmasters Club">
+    <div class="club" data-club="UVic Nitshifters Toastmasters Club" data-category="Other">
   <div class="club-title-container">
     <h4> UVic Nitshifters Toastmasters Club </h4>  
     <span class="club-category">
@@ -2360,7 +2387,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="UVic Games Club">
+    <div class="club" data-club="UVic Games Club" data-category="Interest">
   <div class="club-title-container">
     <h4> UVic Games Club </h4>  
     <span class="club-category">
@@ -2404,7 +2431,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="UVic Submarine Racing Club">
+    <div class="club" data-club="UVic Submarine Racing Club" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Submarine Racing Club </h4>  
     <span class="club-category">
@@ -2450,7 +2477,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="Hong Kong Student Association">
+    <div class="club" data-club="Hong Kong Student Association" data-category="Cultural">
   <div class="club-title-container">
     <h4> Hong Kong Student Association </h4>  
     <span class="club-category">
@@ -2496,7 +2523,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="Society for Indian Classical Arts (SICA)">
+    <div class="club" data-club="Society for Indian Classical Arts (SICA)" data-category="Cultural">
   <div class="club-title-container">
     <h4> Society for Indian Classical Arts (SICA) </h4>  
     <span class="club-category">
@@ -2542,7 +2569,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="VikeSec">
+    <div class="club" data-club="VikeSec" data-category="STEM">
   <div class="club-title-container">
     <h4> VikeSec </h4>  
     <span class="club-category">
@@ -2588,7 +2615,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="Victoria Mandarin Toastmasters club">
+    <div class="club" data-club="Victoria Mandarin Toastmasters club" data-category="Interest">
   <div class="club-title-container">
     <h4> Victoria Mandarin Toastmasters club </h4>  
     <span class="club-category">
@@ -2634,7 +2661,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="UVIC Horticulture Club">
+    <div class="club" data-club="UVIC Horticulture Club" data-category="Environmental">
   <div class="club-title-container">
     <h4> UVIC Horticulture Club </h4>  
     <span class="club-category">
@@ -2676,7 +2703,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="International Friendship Group">
+    <div class="club" data-club="International Friendship Group" data-category="Interest">
   <div class="club-title-container">
     <h4> International Friendship Group </h4>  
     <span class="club-category">
@@ -2722,7 +2749,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="Hillel On Campus">
+    <div class="club" data-club="Hillel On Campus" data-category="Cultural">
   <div class="club-title-container">
     <h4> Hillel On Campus </h4>  
     <span class="club-category">
@@ -2766,7 +2793,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="University of Victoria Rocketry Club">
+    <div class="club" data-club="University of Victoria Rocketry Club" data-category="STEM">
   <div class="club-title-container">
     <h4> University of Victoria Rocketry Club </h4>  
     <span class="club-category">
@@ -2812,7 +2839,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="UVic CIVE Club">
+    <div class="club" data-club="UVic CIVE Club" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic CIVE Club </h4>  
     <span class="club-category">
@@ -2856,7 +2883,7 @@ As students, you’ll likely have to do numerous presentations, which can be a d
 
 
   
-    <div class="club" data-club="Uvic Environmental Engineeeing Club">
+    <div class="club" data-club="Uvic Environmental Engineeeing Club" data-category="STEM">
   <div class="club-title-container">
     <h4> Uvic Environmental Engineeeing Club </h4>  
     <span class="club-category">
@@ -2899,7 +2926,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="UVIC Inclusive Christians">
+    <div class="club" data-club="UVIC Inclusive Christians" data-category="Religious">
   <div class="club-title-container">
     <h4> UVIC Inclusive Christians </h4>  
     <span class="club-category">
@@ -2941,7 +2968,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="Global Medical Brigades">
+    <div class="club" data-club="Global Medical Brigades" data-category="Community Service &amp; Volunteer">
   <div class="club-title-container">
     <h4> Global Medical Brigades </h4>  
     <span class="club-category">
@@ -2987,7 +3014,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="Surfrider Foundation UVic Club">
+    <div class="club" data-club="Surfrider Foundation UVic Club" data-category="Environmental">
   <div class="club-title-container">
     <h4> Surfrider Foundation UVic Club </h4>  
     <span class="club-category">
@@ -3031,7 +3058,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="Young Communist league">
+    <div class="club" data-club="Young Communist league" data-category="Political">
   <div class="club-title-container">
     <h4> Young Communist league </h4>  
     <span class="club-category">
@@ -3077,7 +3104,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="UVic Seismic Design Team">
+    <div class="club" data-club="UVic Seismic Design Team" data-category="STEM">
   <div class="club-title-container">
     <h4> UVic Seismic Design Team </h4>  
     <span class="club-category">
@@ -3121,7 +3148,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="UVic Crypto Club">
+    <div class="club" data-club="UVic Crypto Club" data-category="Other">
   <div class="club-title-container">
     <h4> UVic Crypto Club </h4>  
     <span class="club-category">
@@ -3165,7 +3192,7 @@ We welcome anyone who wants to solve environmental problem through creative solu
 
 
   
-    <div class="club" data-club="InterVarsity Undergraduate at UVIC">
+    <div class="club" data-club="InterVarsity Undergraduate at UVIC" data-category="Religious">
   <div class="club-title-container">
     <h4> InterVarsity Undergraduate at UVIC </h4>  
     <span class="club-category">

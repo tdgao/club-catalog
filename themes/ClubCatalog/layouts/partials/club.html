@@ -1,0 +1,44 @@
+<div class="club" data-club="{{ index . "Club Name (Full Name please)" }}">
+  <div class="club-title-container">
+    <h4> {{ index . "Club Name (Full Name please)" }} </h4>  
+    <span class="club-category">
+      {{ index . "New Club" }} 
+    </span>
+  </div>
+  
+  <p class="club-description"> {{ index . "Club Description" }} </p>
+
+  <div class="club-info-container">
+
+    <div class="club-info club-contact">
+      <h5>Club Info:</h5>
+      {{ if index . "Club Email Address" }}
+      <p>{{ index . "Club Email Address" }}</p>
+      {{ end }}
+
+
+      {{ if index . "Club Website" }}
+      <p><a target="_blank" href="{{ index . "Club Website" }}"> Club Website </a></p>
+      {{ end }}
+
+      {{ if index . "Club Social Media Accounts" }}
+      <p><a target="_blank" href="{{ index . "Club Social Media Accounts" }}"> Club Social Media</a> </p>
+      {{ end }}
+    </div>
+
+    <div class="club-info main-contact">
+      <h5>Main Contact:</h5>
+      {{ if index . "Main Contact Name" }}
+      <p>{{ index . "Main Contact Name" }}</p> 
+      {{ end }}
+      
+      {{ if index . "Main Contact Email Address" }}
+      <p>{{ index . "Main Contact Email Address" }} </p> 
+      {{ end }}
+    </div>
+  </div>
+
+
+
+</div>
+

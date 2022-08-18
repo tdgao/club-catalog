@@ -1,0 +1,7 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: UVic Club Catalog
+theme: ClubCatalog
+staticDir:
+- static
+- data/clubsdata

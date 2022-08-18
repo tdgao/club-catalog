@@ -1,4 +1,4 @@
-# club-catalog
+# UVic Club Catalog
 
 A catalog of all UVic clubs to display basic club information including descriptions, tags, social medias, and contact.
 

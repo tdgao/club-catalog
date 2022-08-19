@@ -20,7 +20,23 @@ function getAllCategories(){
   return categories;
 }
 
+
 // filter categories
+function updateClubsDisplayed(){
+  let selectedCategories = [];
+  document.querySelectorAll('.filter-category[data-selected="true"]').forEach(category => selectedCategories.push(category.dataset.category));
+  
+  clubs.forEach(club => {
+    const cur = getCategory(club);
+    if ( selectedCategories.includes(cur) ){
+      club.classList.remove('hidden-none');
+    } else {
+      club.classList.add('hidden-none');
+    }
+    
+  });
+}
+
 const categories = document.querySelectorAll('.filter-category');
 categories.forEach(tag => {
   // set num clubs in tag
@@ -30,19 +46,56 @@ categories.forEach(tag => {
   // add click listener
   tag.addEventListener("click", () => {
     tag.dataset.selected = (tag.dataset.selected === "true") ? 'false' : 'true';
+    updateClubsDisplayed();
+  });
+});
+
+
+
+
+
+// EXPANDS TAGS
+function expandTagsContainer(force=null){
+  const container = document.getElementById("categories-container");
+  if (force === true || force === false){
+    container.classList.toggle('hidden-none', force);
+    expandTags.classList.toggle('unexpanded', force);
+  } else {
+    container.classList.toggle('hidden-none');
+    expandTags.classList.toggle('unexpanded');
+  }
+}
+const expandTags = document.getElementById("expand-tags");
+expandTags.addEventListener("click", () => {
+  expandTagsContainer();
+});
+window.addEventListener('click', (e) => {
+  const clicked = e.target;
+  if (!clicked.closest('.site-header')){
+    expandTagsContainer(true);
+  }
+});
+
+// CLEAR TAGS & SELECT ALL TAGS
+const clearTags = document.getElementById("clear-tags");
+clearTags.addEventListener("click", () => {
+  categories.forEach(tag => {
+    tag.dataset.selected = "false";
+    expandTagsContainer(false);
     
-    let selectedCategories = [];
-    document.querySelectorAll('.filter-category[data-selected="true"]').forEach(category => selectedCategories.push(category.dataset.category));
-    
-    clubs.forEach(club => {
-      const cur = getCategory(club);
-      if ( selectedCategories.includes(cur) ){
-        club.classList.remove('hidden-none');
-      } else {
-        club.classList.add('hidden-none');
-      }
-      
-    })
+    // clear searched
+    search.value = '';
+    displayAllClubs();
+
+    updateClubsDisplayed();
+  });
+});
+const selectAllTags = document.getElementById("select-all-tags");
+selectAllTags.addEventListener("click", () => {
+  categories.forEach(tag => {
+    tag.dataset.selected = "true";
+    expandTagsContainer(false)
+    updateClubsDisplayed();
   });
 });
 
@@ -58,7 +111,14 @@ async function getClubData() {
 }
 
 async function fuseSearch(input){
+  // clean up input
+  input = input.trim();
+  input = input.replace(/  +/g, ' '); // replace multiple spaces to one space
   const options = {
+    ignoreLocation: true,
+    // minMatchCharLength: parseInt(input.length),
+    threshold: 0.3,
+    // includeMatches:true, // for debugging
     keys: [
       {
         name: 'Club Name (Full Name please)',
@@ -92,19 +152,22 @@ async function fuseSearch(input){
   return clubs;
 }
 
+function displayAllClubs(){
+  clubs.forEach(club => {
+    clubsContainer.appendChild(club);
+  })
+}
 
 const search = document.getElementById('search');
 search.addEventListener('input', () => {
   // search
   const input = search.value;
+  // if no input, display all clubs
+  if (input.length == 0){
+    displayAllClubs();
+    return;
+  }
   fuseSearch(input).then( result => {
-    // if no match found, display all clubs
-    if (result.length == 0){
-      clubs.forEach(club => {
-        clubsContainer.appendChild(club);
-      })
-      return;
-    }
 
     // move all clubs to hidden container / hide all clubs
     clubs.forEach(club => {

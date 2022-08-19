@@ -34,11 +34,13 @@
   <input type="search" id="search" name="search" autocomplete="off" placeholder="Search...">
 
   <div class="tags-heading-container">
-    <div class="tags-heading">Tags <span class="material-icons"> expand_more </span> </div>
-    <button class="clear-all-tags-btn">Clear Tags</button>
+    <div class="tags-heading" id="expand-tags">Tags <span class="material-icons"> expand_more </span> </div>
+    <button id="select-all-tags">Select All</button>
+    ·
+    <button id="clear-tags">Clear</button>
   </div>
 
-  <div class="categories-container">
+  <div class="categories-container" id="categories-container">
 
     <div class="filter-category" data-num-clubs="0" data-category="Arts" data-selected="true">
       <span class="material-icons"> close </span>

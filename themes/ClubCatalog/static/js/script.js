@@ -81,7 +81,12 @@ const clearTags = document.getElementById("clear-tags");
 clearTags.addEventListener("click", () => {
   categories.forEach(tag => {
     tag.dataset.selected = "false";
-    expandTagsContainer(false)
+    expandTagsContainer(false);
+    
+    // clear searched
+    search.value = '';
+    displayAllClubs();
+
     updateClubsDisplayed();
   });
 });
@@ -106,7 +111,14 @@ async function getClubData() {
 }
 
 async function fuseSearch(input){
+  // clean up input
+  input = input.trim();
+  input = input.replace(/  +/g, ' '); // replace multiple spaces to one space
   const options = {
+    ignoreLocation: true,
+    // minMatchCharLength: parseInt(input.length),
+    threshold: 0.3,
+    // includeMatches:true, // for debugging
     keys: [
       {
         name: 'Club Name (Full Name please)',
@@ -140,19 +152,22 @@ async function fuseSearch(input){
   return clubs;
 }
 
+function displayAllClubs(){
+  clubs.forEach(club => {
+    clubsContainer.appendChild(club);
+  })
+}
 
 const search = document.getElementById('search');
 search.addEventListener('input', () => {
   // search
   const input = search.value;
+  // if no input, display all clubs
+  if (input.length == 0){
+    displayAllClubs();
+    return;
+  }
   fuseSearch(input).then( result => {
-    // if no match found, display all clubs
-    if (result.length == 0){
-      clubs.forEach(club => {
-        clubsContainer.appendChild(club);
-      })
-      return;
-    }
 
     // move all clubs to hidden container / hide all clubs
     clubs.forEach(club => {
